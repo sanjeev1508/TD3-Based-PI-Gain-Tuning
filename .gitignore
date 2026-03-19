@@ -1,0 +1,79 @@
+# ─── Python ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.spec
+pip-wheel-metadata/
+share/python-wheels/
+MANIFEST
+*.so
+
+# ─── Virtual environments ─────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ─── Jupyter ──────────────────────────────────────────────
+.ipynb_checkpoints
+*.ipynb
+
+# ─── Generated data (large CSV files) ────────────────────
+data/data_profile_*.csv
+evaluation/td3_profile_*.csv
+evaluation/baseline_profile_*.csv
+
+# ─── Model weights (large binaries) ──────────────────────
+models/best_model.zip
+models/final_model.zip
+models/eval_logs/
+
+# ─── TensorBoard logs ─────────────────────────────────────
+logs/
+
+# ─── Plots (generated at runtime) ────────────────────────
+# Comment these out if you want to commit the plots
+# plots/*.png
+
+# ─── IDE / Editor ─────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ─── Testing / Coverage ───────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# ─── MyPy / type checkers ─────────────────────────────────
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+
+# ─── Stable-Baselines3 monitor logs ──────────────────────
+monitor.csv
