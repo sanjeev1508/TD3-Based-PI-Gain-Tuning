@@ -53,7 +53,7 @@ The correction factors must **never** use plant parameters B, C, D directly.
 ## Project Structure
 
 ```
-caterpillar_pi_td3/
+pi_td3/
 ├── envs/
 │   └── pi_control_env.py       ← Custom Gymnasium environment
 ├── simulation/
@@ -207,4 +207,4 @@ No MATLAB required. Pure Python implementation using `scipy.integrate.solve_ivp`
 
 ---
 
-*Caterpillar Tech Challenge 2026 — Control Systems + ML Research*
+*Control Systems + ML Research*
