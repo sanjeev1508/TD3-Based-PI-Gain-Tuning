@@ -1,5 +1,4 @@
 # TD3-Based PI Gain Tuning
-### Caterpillar Tech Challenge 2026
 
 > **Dynamic gain correction for PI controllers using Twin Delayed Deep Deterministic Policy Gradient (TD3) Reinforcement Learning — pure Python, no MATLAB required.**
 
