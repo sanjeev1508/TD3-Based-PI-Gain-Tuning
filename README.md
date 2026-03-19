@@ -5,6 +5,14 @@
 
 ---
 
+## System Architecture
+
+![Control Loop Design](architecture/control_loop.png)
+
+> **TD3 observes only `[e(t), A(t)]` → outputs `[α, β]` → scales fixed Kp/Ki gains. Plant parameters B, C, D are never exposed to the agent.**
+
+---
+
 ## Problem Statement
 
 Traditional PI controllers require manual tuning of Kp and Ki gains, which is suboptimal when system dynamics change. This project implements an ML-based solution that dynamically adjusts PI gains to minimize error and improve stability under varying load disturbances.
@@ -31,6 +39,15 @@ The correction factors must **never** use plant parameters B, C, D directly.
 | ITAE | 940,819 | 597,404 | ↓ 37% ✓ |
 | Bandwidth (rad/s) | 0.0142 | 0.0141 | — |
 | Phase Margin (°) | 84.91 | 50.07 | Stable ✓ |
+
+---
+
+## Error Response: Baseline PI vs TD3 Adaptive
+
+![Error Comparison — Baseline PI vs TD3 Adaptive PI](plots/plot1_error.png)
+
+> Left: incremental disturbance (A: 0→1) &nbsp;|&nbsp; Right: decremental disturbance (A: 1→0).  
+> TD3 (green) tracks the setpoint significantly tighter than the fixed-gain baseline (red). Dashed yellow lines mark the ±15% requirement envelope.
 
 ---
 
